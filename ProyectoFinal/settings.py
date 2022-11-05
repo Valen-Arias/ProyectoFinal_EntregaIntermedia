@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'AppProyectoFinal'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'ProyectoFinal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["E:/_CURSO_PYTHON_CH/vsc/ProyectoFinal_EntregaIntermedia/AppProyectoFinal/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

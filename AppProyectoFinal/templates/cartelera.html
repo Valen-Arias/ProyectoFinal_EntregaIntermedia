@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartelera</title>
+</head>
+
+<body>
+
+    <h1>CARTELERA</h1>
+    
+    <ul>
+
+        {% for pelicula in lista_peliculas %}
+
+            <li>Título: {{pelicula.titulo}}</li>
+
+        {% endfor %}
+
+    </ul>    
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias excepturi repellat facilis tempora eveniet veniam eos doloribus, eaque, cum architecto laborum, ipsum tempore. Est ex sed repellendus vel! Autem!</p>
+
+    
+</body>
+</html>
