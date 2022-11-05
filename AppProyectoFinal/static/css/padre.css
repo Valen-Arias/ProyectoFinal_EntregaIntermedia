@@ -1,0 +1,138 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body{
+    margin: 0px;
+    background-color: #efefef;
+}
+
+
+
+/* ----------------HEADER--------------------*/
+
+
+header{
+    background-color: #C21E56;
+    color: white;
+    padding: 1rem 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+
+header a{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 5rem;
+}
+
+
+header a:hover{
+    color: cornflowerblue;
+}
+
+
+
+/* ----------------ARTICLE--------------------*/
+
+
+article{
+    font-size: 1.2rem;
+    margin-left: 2rem; 
+    text-align: center;
+}
+
+
+article ul{
+    padding-left: 0;
+    line-height: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+
+article table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+
+article th, td{
+    font-size: 2rem;
+    font-weight:500;
+    padding: 1rem;
+}
+
+
+.guardar{
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    padding:5px 15px; 
+    background: #C21E56; 
+    color: #fff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+
+.titulos{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.linkAgregar{
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #C21E56;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.linkAgregar:hover{
+    color: cornflowerblue;
+}
+
+
+
+/* ----------------FOOTER--------------------*/
+
+
+footer{
+    background-color: #2f3030;
+    border-top: 10px #C21E56  solid;
+    color: #fff;
+    padding: 0.7rem 0rem;
+    margin-top: 2rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+footer a{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+footer a:hover{
+    color: cornflowerblue;
+}
+
+
+footer section{
+    text-align: center;
+    /* margin-left: 2rem; */
+}

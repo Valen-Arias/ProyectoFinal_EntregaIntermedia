@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cartelera</title>
-</head>
+{% extends 'padre.html' %}
 
-<body>
+{% load static %}
 
-    <h1>CARTELERA</h1>
+{% block contenidoQueCambia %}
+
+
+    <h2 class="titulos">CARTELERA</h2>
     
     <ul>
 
         {% for pelicula in lista_peliculas %}
 
-            <li>Título: {{pelicula.titulo}}</li>
+            <li>Título: {{pelicula.titulo}} - Género: {{pelicula.genero}} - Duración: {{pelicula.duracion}} mins. - Clasificación: {{pelicula.clasificacion}}- Idiomas: {{pelicula.idiomas}}</li>
 
         {% endfor %}
 
     </ul>    
 
 
-    <a href="{% url 'agregar_pelicula' %}">Agregar una película</a>
+    <a href="{% url 'agregar_pelicula' %}" class="linkAgregar">Agregar una película</a>
 
-
-</body>
-</html>
+{% endblock %}
