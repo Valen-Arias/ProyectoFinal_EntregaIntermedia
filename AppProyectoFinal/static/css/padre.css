@@ -6,6 +6,9 @@ html{
 body{
     margin: 0px;
     background-color: #efefef;
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column;
 }
 
 
@@ -43,6 +46,7 @@ article{
     font-size: 1.2rem;
     margin-left: 2rem; 
     text-align: center;
+    flex:1;
 }
 
 
@@ -120,19 +124,20 @@ footer{
     border-top: 10px #C21E56  solid;
     color: #fff;
     padding: 0.7rem 0rem;
-    margin-top: 2rem;
+    margin-top: 8rem;
     text-align: center;
-    position: absolute;
-    bottom: 0;
+    /* position: static;
+    bottom: 0; */
     width: 100%;
+    min-height: 100px;
 }
+
 
 
 footer a{
     font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
-    text-align: center;
 }
 
 
@@ -141,7 +146,15 @@ footer a:hover{
 }
 
 
-footer section{
-    text-align: center;
-    /* margin-left: 2rem; */
+.footer-creditos{
+    margin: 0;
+    display: inline-block;
+    width: 10%;
+}
+
+.footer-contacto{
+    margin: 0;
+    display: inline-block;
+    width: 10%;
+    vertical-align: 160%;
 }
