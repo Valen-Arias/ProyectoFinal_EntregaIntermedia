@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppProyectoFinal.views import agregarPelicula, cartelera
+from AppProyectoFinal.views import agregarPelicula, cartelera, agregarCombo, mostrarCombos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agregar-pelicula', agregarPelicula, name="agregar_pelicula"),
-    path('cartelera', cartelera, name="cartelera")
+    path('cartelera', cartelera, name="cartelera"),
+    path('agregar-combo', agregarCombo, name="agregar_combo"),
+    path('combos', mostrarCombos, name="combos"),
 ]

@@ -4,9 +4,10 @@
 
 {% block contenidoQueCambia %}
 
-    <h2>AGREGAR PELÍCULAS</h2>
-    
-    {% if peliculaFormulario.errors %}
+
+    <h2>AGREGAR COMBOS</h2>
+        
+    {% if comboFormulario.errors %}
 
         <p class="error"> Error en el formulario</p>
         
@@ -16,13 +17,13 @@
 
         <table>
 
-            {{ peliculaFormulario.as_table }}
+            {{ comboFormulario.as_table }}
 
         </table>
 
         <input type="submit" value="Guardar" class="guardar">
 
     </form>
-   
+
 
 {% endblock %}

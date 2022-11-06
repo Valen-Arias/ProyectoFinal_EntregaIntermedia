@@ -1,0 +1,24 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2 class="titulos">COMBOS</h2>
+    
+    <ul>
+
+        {% for combo in lista_combos %}
+
+            <li><span class="bold">{{combo.nombre}}:</span>  {{combo.descripcion}} - ${{combo.precio}}</li>
+
+        {% endfor %}
+
+    </ul>    
+
+
+    <a href="{% url 'agregar_combo' %}" class="linkAgregar">Agregar un combo</a>
+    
+
+{% endblock %}

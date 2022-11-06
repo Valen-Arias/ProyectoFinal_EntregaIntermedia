@@ -60,11 +60,20 @@ article table{
 }
 
 
+
+
 article th, td{
     font-size: 2rem;
     font-weight:500;
     padding: 1rem;
 }
+
+
+
+.bold{
+    font-weight: 600;
+}
+
 
 
 .guardar{
