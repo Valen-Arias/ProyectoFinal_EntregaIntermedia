@@ -54,6 +54,7 @@ article ul{
     padding-left: 0;
     line-height: 3rem;
     margin-bottom: 3.5rem;
+
 }
 
 
@@ -70,6 +71,20 @@ article th, td{
     font-size: 2rem;
     font-weight:500;
     padding: 1rem;
+}
+
+.container{
+    width: 750px;
+    margin: 0 auto;
+}
+
+
+.textarea-sala{
+    background-color: #c45151;
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+    resize: none;
 }
 
 

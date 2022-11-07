@@ -1,0 +1,28 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2 class="titulos">NUESTRAS SALAS</h2>
+    
+    <section class="container">
+
+        <ul>
+
+            {% for sala in lista_salas %}
+    
+                <li><span class="bold">{{sala.nombre}}:</span> - Característica: {{sala.descripcion}}</li>
+    
+            {% endfor %}
+    
+        </ul>    
+
+    </section>
+
+
+
+    <a href="{% url 'agregar_sala' %}" class="linkAgregar">Agregar una sala</a>
+
+{% endblock %}

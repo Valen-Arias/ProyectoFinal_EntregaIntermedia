@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
-    <link href="{% static 'css/padre.css' %}"  rel="stylesheet" >
+    <link href= "{% static 'css/padre.css' %}"  rel="stylesheet" >
 
 </head>
 
@@ -21,11 +21,10 @@
     <header>
 
         <h1>Proyecto Final - entrega intermedia</h1>
-        <a href="#">INICIO</a>
         <a href="{% url 'cartelera' %}">CARTELERA</a>
         <a href="{% url 'combos' %}">COMBOS</a>
-        <a href="#">SALAS</a>
-        <a href="#">SUCURSALES</a>
+        <a href="{% url 'salas' %}">SALAS</a>
+        <a href="#">COMPLEJOS</a>
 
     </header>
 

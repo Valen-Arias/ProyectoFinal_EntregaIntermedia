@@ -1,0 +1,21 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body{
+    margin: 0px;
+    background-color: #efefef;
+    min-height: 100vh;
+    display:flex; 
+    flex-direction:column;
+}
+
+
+.textarea-sala{
+    background-color: #c45151;
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+    resize: none;
+}

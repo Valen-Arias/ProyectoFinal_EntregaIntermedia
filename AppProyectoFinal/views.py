@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Pelicula, Producto
-from .forms import AgregarPelicula, AgregarCombo
+from .models import Pelicula, Producto, Sala
+from .forms import AgregarPelicula, AgregarCombo, AgregarSala
 
 # Create your views here.
 
@@ -80,3 +80,37 @@ def mostrarCombos(request):
     lista = Producto.objects.all()
     
     return render(request, "combos.html", {"lista_combos": lista})
+
+
+
+def agregarSala(request):
+
+
+    if request.method == 'POST':
+
+        salaFormulario = AgregarSala(request.POST)
+
+        print(salaFormulario)
+
+        if salaFormulario.is_valid:
+
+            informacion = salaFormulario.cleaned_data
+
+            sala = Sala(nombre=informacion['nombre'], descripcion=informacion['descripcion'])
+
+            sala.save()
+
+            return redirect ('salas')
+    
+    else:
+
+        salaFormulario = AgregarSala()
+    
+    return render(request, "agregar_sala.html", {"salaFormulario":salaFormulario})
+
+
+def mostrarSalas(request):
+
+    lista = Sala.objects.all()
+    
+    return render(request, "salas.html", {"lista_salas": lista})

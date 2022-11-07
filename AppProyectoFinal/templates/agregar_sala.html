@@ -1,0 +1,29 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2>AGREGAR SALA</h2>
+        
+    {% if salaFormulario.errors %}
+
+        <p class="error"> Error en el formulario</p>
+        
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <table>
+
+            {{ salaFormulario.as_table }}
+
+        </table>
+
+        <input type="submit" value="Guardar" class="guardar">
+
+    </form>
+
+
+{% endblock %}
