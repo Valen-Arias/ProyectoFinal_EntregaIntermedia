@@ -7,20 +7,17 @@
 
     <h2 class="titulos">NUESTRAS SALAS</h2>
     
-    <section class="container">
-
-        <ul>
 
             {% for sala in lista_salas %}
-    
-                <li><span class="bold">{{sala.nombre}}:</span> - Característica: {{sala.descripcion}}</li>
-    
+            
+                <section class="salas-card">
+
+                    <p><span class="titulo-sala">{{sala.nombre}}:</span> <br> {{sala.descripcion}}</p>
+
+                </section>
+
+                
             {% endfor %}
-    
-        </ul>    
-
-    </section>
-
 
 
     <a href="{% url 'agregar_sala' %}" class="linkAgregar">Agregar una sala</a>
