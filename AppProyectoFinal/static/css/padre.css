@@ -20,7 +20,7 @@ header{
     background-color: #C21E56;
     color: white;
     padding: 1rem 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
@@ -79,7 +79,7 @@ article th, td{
 }
 
 .salas-card{
-    margin: 0 0 75px 75px;
+    margin: 25px;
     padding: 1.5rem;
     width: 400px;
     height: auto;
@@ -91,9 +91,14 @@ article th, td{
 }
 
 
+.precio-combo{
+    font-weight: 600;
+}
+
+
 
 .titulo-sala{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
 }
 
@@ -109,11 +114,42 @@ article th, td{
 }
 
 
-
-.bold{
-    font-weight: 600;
+.card-cartelera{
+    padding: 1rem 1.5rem;
+    width: fit-content;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    list-style-type: none;
 }
 
+
+.card-combos{
+    padding: 0.3rem 0.7rem;
+    width: auto;
+    height: auto;
+    max-width: 350px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    line-height: 2rem;
+    box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.nombre-combo{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+
+.bold{
+    font-weight: 800;
+}
 
 
 .guardar{
@@ -145,6 +181,7 @@ article th, td{
     text-align: center;
     display: block;
     margin: auto;
+    margin-top: 50px;
     width:fit-content;
 
 }

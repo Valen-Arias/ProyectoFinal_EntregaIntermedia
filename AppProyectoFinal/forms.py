@@ -1,5 +1,5 @@
 from django import forms
-from .models import Sala
+from .models import Sala, Complejo
 
 
 
@@ -32,3 +32,38 @@ class AgregarSala(forms.ModelForm):
                 }
             )
         }
+
+
+
+
+class AgregarComplejo(forms.ModelForm):
+
+
+    class Meta:
+        model = Complejo
+        fields = ('__all__')
+        widgets = {
+            'apertura': forms.TimeInput(format='%H:%M',
+                attrs={
+                    'input type': 'time',
+                    'class': 'horario-complejos'
+                }
+            ),
+
+            'cierre': forms.TimeInput(format='%H:%M',
+                attrs={
+                    'class': 'horario-complejos'
+                }
+            ),
+        }
+
+
+
+
+
+
+# class AgregarComplejo(forms.Form):
+#     nombre = forms.CharField(max_length=50)
+#     direccion = forms.CharField(max_length=50)
+#     apertura = forms.DateTimeField()
+#     cierre = forms.DateTimeField() 

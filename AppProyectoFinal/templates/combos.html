@@ -7,15 +7,17 @@
 
     <h2 class="titulos">COMBOS</h2>
     
-    <ul>
 
         {% for combo in lista_combos %}
 
-            <li><span class="bold">{{combo.nombre}}:</span>  {{combo.descripcion}} - ${{combo.precio}}</li>
+            <section class="card-combos">
+
+                <p><span class="nombre-combo">{{combo.nombre}} <br> </span>  {{combo.descripcion}} <br> <span class="precio-combo">${{combo.precio}}</span></p>
+
+            </section>
 
         {% endfor %}
 
-    </ul>    
 
 
     <a href="{% url 'agregar_combo' %}" class="linkAgregar">Agregar un combo</a>

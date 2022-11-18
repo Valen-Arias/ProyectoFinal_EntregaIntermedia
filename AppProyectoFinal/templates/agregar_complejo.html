@@ -1,0 +1,53 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2>AGREGAR COMPLEJO</h2>
+        
+    {% if complejoFormulario.errors %}
+
+        <p class="error"> Error en el formulario</p>
+        
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <table>  <!-- dibujo la tabla porque el as_table no permite input de type=time -->
+              <tr>
+                <th><label for="id_nombre">Nombre:</label></th>
+                <td>
+                    <input type="text" name="nombre" maxlength="50" required id="id_nombre">
+                </td>
+              </tr>
+            
+              <tr>
+                <th><label for="id_direccion">Direccion:</label></th>
+                <td>
+                  <input type="text" name="direccion" maxlength="50" required id="id_direccion">
+                </td>
+              </tr>
+            
+              <tr>
+                <th><label for="id_horario_apertura">Horario apertura:</label></th>
+                <td>
+                   <input type="time" name="horario_apertura" required id="id_horario_apertura">
+                </td>
+              </tr>
+            
+              <tr>
+                <th><label for="id_horario_cierre">Horario cierre:</label></th>
+                <td>
+                  <input type="time" name="horario_cierre" required id="id_horario_cierre">        
+                </td>
+              </tr>
+        </table>
+
+        <input type="submit" value="Guardar" class="guardar">
+
+    </form>
+
+
+{% endblock %}

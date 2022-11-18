@@ -1,16 +1,11 @@
-from django.shortcuts import render, redirect
-from .models import Pelicula, Producto, Sala
-from .forms import AgregarPelicula, AgregarCombo, AgregarSala
+from django.shortcuts import redirect, render
+
+from .forms import AgregarCombo, AgregarPelicula, AgregarSala, AgregarComplejo
+from .models import Pelicula, Producto, Sala, Complejo
 
 # Create your views here.
 
 
-# def pelicula(request, titulo, genero, duracion, clasificacion, idiomas, salas):
-    
-#     pelicula = Pelicula(titulo = titulo, genero = genero, duracion = duracion, clasificacion = clasificacion, idiomas = idiomas, salas = salas)
-#     pelicula.save()
-
-#     return render (request, "agragarpelicula.html")
 
 
 def agregarPelicula(request):
@@ -45,6 +40,12 @@ def cartelera(request):
     lista = Pelicula.objects.all()
     
     return render(request, "cartelera.html", {"lista_peliculas": lista})
+
+
+
+def busqueda_pelicula(request):
+    
+    return render(request, "cartelera.html")
 
 
 
@@ -114,3 +115,40 @@ def mostrarSalas(request):
     lista = Sala.objects.all()
     
     return render(request, "salas.html", {"lista_salas": lista})
+
+
+
+
+def agregarComplejo(request):
+
+
+    if request.method == 'POST':
+
+        complejoFormulario = AgregarComplejo(request.POST)
+
+        print(complejoFormulario)
+
+        if complejoFormulario.is_valid:
+
+            informacion = complejoFormulario.cleaned_data
+
+            complejo = Complejo(nombre=informacion['nombre'], direccion=informacion['direccion'], horario_apertura=informacion['horario_apertura'], horario_cierre=informacion['horario_cierre'])
+
+            complejo.save()
+
+            return redirect ('complejos')
+    
+    else:
+
+        complejoFormulario = AgregarComplejo()
+    
+    return render(request, "agregar_complejo.html", {"complejoFormulario":complejoFormulario})
+
+
+
+
+def mostrarComplejos(request):
+
+    lista = Complejo.objects.all()
+    
+    return render(request, "complejos.html", {"lista_complejos": lista})

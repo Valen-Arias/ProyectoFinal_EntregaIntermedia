@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppProyectoFinal.views import agregarPelicula, agregarSala, cartelera, agregarCombo, mostrarCombos, mostrarSalas
+from AppProyectoFinal.views import agregarPelicula, agregarSala, cartelera, agregarCombo, mostrarCombos, mostrarSalas, agregarComplejo, mostrarComplejos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +25,6 @@ urlpatterns = [
     path('combos', mostrarCombos, name="combos"),
     path('agregar-sala', agregarSala, name="agregar_sala"),
     path('salas', mostrarSalas, name="salas"),
+    path('agregar-complejo', agregarComplejo, name="agregar_complejo"),
+    path('complejos', mostrarComplejos, name="complejos")
 ]

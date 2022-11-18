@@ -20,3 +20,15 @@ class Producto(models.Model):
 class Sala(models.Model):
     nombre = models.CharField(max_length=50)
     descripcion = models.CharField(max_length=750)
+
+
+class Complejo(models.Model):
+    nombre = models.CharField(max_length=50)
+    direccion = models.CharField(max_length=50)
+    horario_apertura = models.TimeField(auto_now=False, auto_now_add=False, null=True)
+    horario_cierre = models.TimeField(auto_now=False, auto_now_add=False, null=True)
+    # hora_apertura = models.SmallIntegerField(null=60, )
+    # minutos_apertura = models.SmallIntegerField(null=60)
+    # hora_cierre = models.SmallIntegerField(null=60)
+    # minutos_cierre = models.SmallIntegerField(null=60) # (auto_now=False, auto_now_add=False)
+    # #cierre = models.TimeField(auto_now=False, auto_now_add=False)    

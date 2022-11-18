@@ -1,0 +1,26 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2 class="titulos">NUESTROS COMPLEJOS</h2>
+    
+
+            {% for complejo in lista_complejos %}
+            
+                <section class="salas-card">
+                    
+
+                    <p><span class="titulo-sala">{{complejo.nombre}}:</span> <br> {{complejo.direccion}} <br> {{complejo.horario_apertura|time:"H:i"}} - {{complejo.horario_cierre|time:"H:i"}}</p>
+
+                </section>
+
+                
+            {% endfor %}
+
+
+    <a href="{% url 'agregar_complejo' %}" class="linkAgregar">Agregar un complejo</a>
+
+{% endblock %}

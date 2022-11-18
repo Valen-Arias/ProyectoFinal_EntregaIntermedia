@@ -11,7 +11,9 @@
 
         {% for pelicula in lista_peliculas %}
 
-            <li><span class="bold">{{pelicula.titulo}}:</span> - Género: {{pelicula.genero}} - Duración: {{pelicula.duracion}} mins. - Clasificación: {{pelicula.clasificacion}}- Idiomas: {{pelicula.idiomas}}</li>
+            <section class="card-cartelera">
+                <li><span class="bold">{{pelicula.titulo}}:</span> - Género: {{pelicula.genero}} - Duración: {{pelicula.duracion}} mins. - Clasificación: {{pelicula.clasificacion}}- Idiomas: {{pelicula.idiomas}}</li>
+            </section>
 
         {% endfor %}
 
