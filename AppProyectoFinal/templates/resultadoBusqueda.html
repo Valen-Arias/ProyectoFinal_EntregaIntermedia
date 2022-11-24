@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2>RESULTADO DE BUSQUEDA</h2>
+        
+    <p>La película que coincide con la busqueda "{{ titulo }}" es:</p>
+
+
+    <section class="card-cartelera">
+
+        <li><span class="bold">{{peli.titulo}}:</span> - Género: {{peli.genero}} - Duración: {{peli.duracion}} mins. - Clasificación: {{peli.clasificacion}}- Idiomas: {{peli.idiomas}}</li>
+        
+    </section>
+
+
+{% endblock %}

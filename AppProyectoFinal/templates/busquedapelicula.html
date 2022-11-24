@@ -1,0 +1,27 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h2>BUSCAR PELICULAS</h2>
+        
+    {% if salaFormulario.errors %}
+
+        <p class="error"> Error en el formulario</p>
+        
+    {% endif %}
+
+    <form action="{% url 'buscar' %}" method="GET">{% csrf_token %}
+        
+        <p>Buscar una película por nombre</p>
+
+        <input type="text" name="pelicula">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+
+{% endblock %}

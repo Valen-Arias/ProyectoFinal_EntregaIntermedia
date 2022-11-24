@@ -152,3 +152,25 @@ def mostrarComplejos(request):
     lista = Complejo.objects.all()
     
     return render(request, "complejos.html", {"lista_complejos": lista})
+
+
+def busquedaPelicula(request):
+
+    return render(request, "busquedapelicula.html")
+
+
+
+def buscarPelicula(request):
+    try:
+
+        busqueda = request.GET['pelicula']
+
+        peli = Pelicula.objects.get(titulo = busqueda)
+
+        print(peli.titulo)
+        print(type(peli))
+
+        return render(request, "resultadoBusqueda.html", {'peli': peli, 'titulo': busqueda})
+
+    except:
+        return render(request, "error.html")
