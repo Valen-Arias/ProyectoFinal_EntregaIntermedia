@@ -27,7 +27,7 @@ class AgregarSala(forms.ModelForm):
         widgets = {
             'descripcion': forms.Textarea(
                 attrs={
-                    'placeholder': 'Ingrese una descripción...',
+                    'placeholder': 'Ingrese una descripción de no más de 750 caracteres...',
                     'class': 'textarea-sala'
                 }
             )

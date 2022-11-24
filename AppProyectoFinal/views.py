@@ -167,9 +167,6 @@ def buscarPelicula(request):
 
         peli = Pelicula.objects.get(titulo = busqueda)
 
-        print(peli.titulo)
-        print(type(peli))
-
         return render(request, "resultadoBusqueda.html", {'peli': peli, 'titulo': busqueda})
 
     except:
